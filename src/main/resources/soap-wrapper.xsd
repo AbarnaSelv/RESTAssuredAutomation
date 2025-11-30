@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:tns="http://tempuri.org/"
+    targetNamespace="http://schemas.xmlsoap.org/soap/envelope/"
+    elementFormDefault="qualified">
+
+    <!-- import your calculator definitions -->
+    <xs:import namespace="http://tempuri.org/" schemaLocation="calculator.xsd"/>
+
+    <!-- declare Envelope in SOAP namespace and require AddResponse inside Body -->
+    <xs:element name="Envelope">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Body">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- reference the AddResponse element from calculator.xsd -->
+                            <xs:element ref="tns:AddResponse"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
