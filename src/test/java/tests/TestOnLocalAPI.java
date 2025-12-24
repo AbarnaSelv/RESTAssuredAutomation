@@ -22,7 +22,7 @@ public class TestOnLocalAPI {
 	 * "users": [ { "id": 1, "name": "Raghav" } ] }
 	 */
 //  7. Open CMD
-//  8. Navigate to your folder:
+//  8. Navigate to your folder: C:\Users\sharfaras\json-server-demo>
 //  9. json-server --watch db.json
 //  10. If everything is correct, you will see something like:
 	/*
@@ -46,7 +46,7 @@ public class TestOnLocalAPI {
 
 
 	
-	//@Test
+	@Test
 	public void get() {
 		baseURI = "http://localhost:3000";
 		given().get("/posts").then().statusCode(200).log().all();
@@ -77,7 +77,7 @@ public class TestOnLocalAPI {
 			
 	}
 	
-	//@Test
+	@Test
 	public void put() {
 		JSONObject request = new JSONObject();
 		request.put("title","Love Story forever");

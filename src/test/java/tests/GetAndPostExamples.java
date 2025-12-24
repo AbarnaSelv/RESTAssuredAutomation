@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 import io.restassured.http.ContentType;
 
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
+
+import static org.hamcrest.Matchers.equalTo;
 
 import java.util.HashMap;
 import java.util.Map;

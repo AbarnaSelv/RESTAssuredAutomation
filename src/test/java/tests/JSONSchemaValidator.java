@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import org.testng.annotations.Test;
 
-import io.restassured.module.jsv.JsonSchemaValidator;
+import static io.restassured.module.jsv.JsonSchemaValidator.*;
 
 public class JSONSchemaValidator {
 	
@@ -29,9 +29,9 @@ public class JSONSchemaValidator {
 	        
 	        given()
 	        .when()
-	            .get("/users")
+	            .get("/posts")
 	        .then()
-	            .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schema.json"))
+	            .assertThat().body(matchesJsonSchemaInClasspath("Schema.json"))
 	            .statusCode(200);
 	          
 	    }

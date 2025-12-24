@@ -60,6 +60,7 @@ public class PutPatchDeleteExamples {
 
         baseURI = "https://jsonplaceholder.typicode.com";
 
+        given().
         when()
             .delete("/posts/1") // delete the post with ID 1
         .then()

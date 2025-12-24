@@ -15,7 +15,7 @@ public class TestsExample {
 	
 	@Test
 	public void test1() {
-		Response response =	get("https://reqres.in/api/users?page=2");
+		Response response =	get("https://jsonplaceholder.typicode.com/users");
 		System.out.println(response.getStatusCode()); //200 means success 
 		System.out.println(response.getTime()); // how long the request took
 		System.out.println(response.getBody().asString()); // full JSON response
@@ -29,12 +29,12 @@ public class TestsExample {
 	
 	@Test
 	public void test2() { // BDD Style 
-		baseURI = "https://reqres.in/api";
+		baseURI = "https://jsonplaceholder.typicode.com";
 		given().
-		  get("/users?page=2").
+		  get("/users").
 		then().
 		  statusCode(200).
-		  body("data[1].id", equalTo(8))
+		  body("[3].name", equalTo("Patricia Lebsack"))
 		  .log().all(); // to get the complete response to be printed
 		
 	}

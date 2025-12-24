@@ -14,9 +14,13 @@ import org.testng.annotations.Test;
 import io.restassured.http.ContentType;
 
 public class XMLSchemaValidator {
+	
+	// see Fix XSD Error in chatgpt for more info
 
     @Test
-    public void schemaValidation() throws IOException {
+    public void schemaValidation() throws IOException { 
+    	
+    	
 
         File file = new File("./SOAPRequest/Add.xml");
         FileInputStream fileInputStream = new FileInputStream(file);
@@ -36,7 +40,7 @@ public class XMLSchemaValidator {
                         .body("//*:AddResult.text()", equalTo("15"))
                         .extract()
                         .xmlPath()
-                        .getString("Envelope.Body.AddResponse");
+                        .getString("Envelope.Body.AddResponse"); // XPath-like navigation inside the SOAP XML.
 
         given()
                 .body(innerXML)
