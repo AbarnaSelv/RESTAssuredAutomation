@@ -17,7 +17,7 @@ This project contains API automation tests using REST Assured in Java.
 - `src/test/resources` - Test resources.
 - `pom.xml` - Maven dependencies and build configuration.
 
-Also Project Structure Screenshot is added inside the repository under the `Project_Structure/` folder.
+Also, Project Structure Screenshot is added inside the repository under the `Project_Structure/` folder.
 
 ## Tools & Dependencies
 
