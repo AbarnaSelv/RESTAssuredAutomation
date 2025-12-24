@@ -1,6 +1,9 @@
 # REST Assured Automation
 
-This project contains API automation tests using REST Assured in Java.
+This project contains **API automation tests** implemented using **REST Assured in Java**.  
+It is designed to demonstrate practical API testing concepts such as **CRUD operations**, **schema validation**, **SOAP services**, and **local API testing**, following a clean and easy-to-understand structure.
+
+The project serves as a hands-on reference for learning and practicing **real-world API automation scenarios**.
 
 ## Project Structure
 
@@ -17,7 +20,7 @@ This project contains API automation tests using REST Assured in Java.
 - `src/test/resources` - Test resources.
 - `pom.xml` - Maven dependencies and build configuration.
 
-Also, Project Structure Screenshot is added inside the repository under the `Project_Structure/` folder.
+Project structure screenshots are available inside the repository under the **Project_Structure/** folder.
 
 ## Tools & Dependencies
 
